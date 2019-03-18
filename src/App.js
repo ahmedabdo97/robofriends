@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import { robots } from './robots';
-import SearchBox from './SearchBox';
+import SearchBox from "./SearchBox";
 
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
     }
     render() {
         const filteredRobots = this.state.robots.filter(robot =>{
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
 
         return (
