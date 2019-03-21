@@ -2,7 +2,7 @@ import { CHANGE_SEARCH_FIELD } from './constants';
 // the single source the unchangeable
 const initialState = {
     searchField:''
-}
+};
 
 export const searchRobots = (state=initialState, action={}) => {
     switch(action.type) {
@@ -13,4 +13,4 @@ export const searchRobots = (state=initialState, action={}) => {
           return state;
     
     }
-}   
+};

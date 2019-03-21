@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 
 class ErrorBoundry extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             hasError: false
         }
-   }
+    }
 
-   componentDidCatch(error, info) {
-       this.setState({hasError:true })
+    componentDidCatch(error, info) {
+        this.setState({hasError: true})
+    }
+    
 
-   }
+    render() {
+        if (this.state.hasError) {
+            return <h1>There Is Error</h1>
+        }
 
-
-   render() {
-       if (this.state.hasError) {
-           return <h1>OOPS, Thats Bad</h1>
-       }
-       return this.children;
-   }
-
+        return this.props.children
+    }
 }
+
 
 export default ErrorBoundry;
