@@ -1,0 +1,20 @@
+﻿App.render
+C:/Users/windw/Desktop/robofriends/src/containers/App.js:33
+  30 |       this.props.onRequestRobots();
+  31 |    }
+  32 | 
+> 33 |    render() {
+     | ^  34 |        const { searchField, onSearchChange, robots, isPending } = this.state;
+  35 |        const filteredRobots = robots.filter(robots => robots.name.toLowerCase().includes(searchField.toLowerCase()));
+  36 |        return isPending ?
+View compiled
+▶ 23 stack frames were collapsed.
+Module../src/index.js
+C:/Users/windw/Desktop/robofriends/src/index.js:18
+  15 | const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
+  16 | 
+  17 | 
+> 18 | ReactDOM.render(
+  19 |                 <Provider store={store}>
+  20 |                   <App />
+  21 |                 </Provider>, document.getElementById('root'));
